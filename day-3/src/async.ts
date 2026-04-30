@@ -18,3 +18,11 @@ async function fetchUser() {
         resolve(users.map(user => ({ id: user.id, name: user.name })));
     })
 }
+
+async function getUserData() {
+  const user = await fetchUser()
+
+  console.log(user)
+}
+
+getUserData();
